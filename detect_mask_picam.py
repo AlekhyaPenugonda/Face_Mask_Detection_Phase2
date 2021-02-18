@@ -98,8 +98,9 @@ maskNet = load_model(args["model"])
 print("[INFO] starting video stream...")
 #vs = VideoStream(src=0).start()
 vs = VideoStream(usePiCamera=True).start()
+cap=cv2.VideoCapture(0)
+ff = cap.read()
 time.sleep(2.0)
-
 # loop over the frames from the video stream
 while True:
 	# grab the frame from the threaded video stream and resize it
